@@ -1,5 +1,5 @@
 encryption = "age"
 
 [age]
-    recipient = {{ secret "security find-generic-password -a chezmoi-age-public-key -s age -w" }}
+    recipient = {{ keyring "chezmoi-age-public-key" $USER }}
     identity = "~/Documents/.config/chezmoi/age/key.txt"
