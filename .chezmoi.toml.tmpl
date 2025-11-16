@@ -1,0 +1,5 @@
+encryption = "age"
+
+[age]
+    recipient = {{ ksecurity find-generic-password -a "chezmoi-age-public-key" -s "age" -w }}
+    identity = "~/Documents/.config/chezmoi/age/key.txt"
