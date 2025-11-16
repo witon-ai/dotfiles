@@ -1,5 +1,5 @@
 encryption = "age"
 
 [age]
-    recipient = {{ output "security" "find-generic-password" "-a" "chezmoi-age-public-key" "-s" "age" "-w" }}
+    recipient = "{{ output "security" "find-generic-password" "-a" "chezmoi-age-public-key" "-s" "age" "-w" }}"
     identity = "~/Documents/.config/chezmoi/age/key.txt"
