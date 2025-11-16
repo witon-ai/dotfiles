@@ -1,8 +1,5 @@
-[data]
-    name = "{{ .chezmoi.username }}"
-
 encryption = "age"
 
 [age]
-    recipient = {{ keyring "chezmoi-age-public-key" .chezmoi.username | quote }}
+    recipient = {{ keyring "chezmoi-age-public-key" .chezmoi.username }}
     identity = "~/Documents/.config/chezmoi/age/key.txt"
