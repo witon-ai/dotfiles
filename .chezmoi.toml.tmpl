@@ -6,5 +6,5 @@ name = "witon"
 encryption = "age"
 
 [age]
-    recipient = {{ keyring "chezmoi-age-public-key" .name | quote }}
+    recipient = {{ keyring "chezmoi-age-public-key" "witon" | quote }}
     identity = "~/Documents/.config/chezmoi/age/key.txt"
