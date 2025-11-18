@@ -9,4 +9,12 @@ brew {{ . | quote }}
 cask {{ . | quote }}
 {{ end -}}
 EOF
+
+# Install npm global packages
+{{ if .packages.darwin.npms -}}
+{{ range .packages.darwin.npms -}}
+echo "Installing npm package: {{ . }}"
+npm install -g {{ . | quote }} || echo "Failed to install {{ . }}, continuing..."
+{{ end -}}
+{{ end -}}
 {{ end -}}

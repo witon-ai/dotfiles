@@ -13,4 +13,3 @@ echo "Generating age key..."
 mkdir -p $CHEZMOI_AGE_HOME
 chezmoi age-keygen --output=$AGE_KEY_FILE
 age-keygen -y $AGE_KEY_FILE > $AGE_KEY_PUBLIC_FILE
-chezmoi secret keyring set --service=$SERVICE --user=$USER --value="$(cat $AGE_KEY_PUBLIC_FILE)"

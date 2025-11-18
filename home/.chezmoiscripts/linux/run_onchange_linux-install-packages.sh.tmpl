@@ -11,6 +11,21 @@ sudo apt-get update
 sudo apt-get install -y {{ . | quote }}
 {{ end -}}
 
+# Install npm global packages
+{{ if .packages.linux.npms -}}
+{{ range .packages.linux.npms -}}
+echo "Installing npm package: {{ . }}"
+sudo npm install -g {{ . | quote }} || echo "Failed to install {{ . }}, continuing..."
+{{ end -}}
+{{ end -}}
+
+# Set zsh as default shell
+if [ "$SHELL" != "$(which zsh)" ]; then
+    echo "Setting zsh as default shell..."
+    chsh -s $(which zsh)
+    echo "Default shell changed to zsh. Please log out and log back in for changes to take effect."
+fi
+
 # Clean up
 sudo apt-get autoremove -y
 sudo apt-get clean

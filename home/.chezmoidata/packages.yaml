@@ -4,7 +4,13 @@ packages:
     - 'git'
     casks:
     - 'google-chrome'
+    npms:
+    - '@anthropic-ai/claude-code'
   linux:
     apts:
+    - 'git'
+    - 'npm'
     - 'python3-keyring'
     - 'zsh'
+    npms:
+    - '@anthropic-ai/claude-code'
