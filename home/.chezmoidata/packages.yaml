@@ -4,3 +4,6 @@ packages:
     - 'git'
     casks:
     - 'google-chrome'
+  linux:
+    apts:
+    - 'python3-keyring'
