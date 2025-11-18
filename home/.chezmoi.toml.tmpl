@@ -1,5 +1,5 @@
 encryption = "age"
 
 [age]
-    recipient = {{ include "/home/witon/Documents/.config/chezmoi/age/key.pub" | trim | quote }}
-    identity = "/home/witon/Documents/.config/chezmoi/age/key.txt"
+    recipient = {{ include (joinPath .chezmoi.homeDir "Documents/.config/chezmoi/age/key.pub") | trim | quote }}
+    identity = {{ joinPath .chezmoi.homeDir "Documents/.config/chezmoi/age/key.txt" | quote }}
