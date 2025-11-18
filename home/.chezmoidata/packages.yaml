@@ -7,3 +7,4 @@ packages:
   linux:
     apts:
     - 'python3-keyring'
+    - 'zsh'
