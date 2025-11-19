@@ -19,6 +19,16 @@ sudo npm install -g {{ . | quote }} || echo "Failed to install {{ . }}, continui
 {{ end -}}
 {{ end -}}
 
+# Install pipx packages
+{{ if .packages.linux.pipx -}}
+export PATH="$PATH:$HOME/.local/bin"
+pipx ensurepath || true
+{{ range .packages.linux.pipx -}}
+echo "Installing pipx package: {{ . }}"
+pipx install {{ . | quote }} || pipx upgrade {{ . | quote }} || echo "Failed to install {{ . }}, continuing..."
+{{ end -}}
+{{ end -}}
+
 # Set zsh as default shell
 if [ "$SHELL" != "$(which zsh)" ]; then
     echo "Setting zsh as default shell..."

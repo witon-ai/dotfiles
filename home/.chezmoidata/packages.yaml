@@ -10,7 +10,10 @@ packages:
     apts:
     - 'git'
     - 'npm'
+    - 'pipx'
     - 'python3-keyring'
     - 'zsh'
     npms:
     - '@anthropic-ai/claude-code'
+    pipx:
+    - 'uv'
