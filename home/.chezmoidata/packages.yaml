@@ -1,19 +1,16 @@
 packages:
+  npms:
+  - '@anthropic-ai/claude-code'
+  - '@google/gemini-cli'
   darwin:
     brews:
     - 'git'
     casks:
     - 'google-chrome'
-    npms:
-    - '@anthropic-ai/claude-code'
   linux:
     apts:
     - 'git'
-    - 'npm'
     - 'pipx'
-    - 'python3-keyring'
     - 'zsh'
-    npms:
-    - '@anthropic-ai/claude-code'
     pipx:
     - 'uv'
