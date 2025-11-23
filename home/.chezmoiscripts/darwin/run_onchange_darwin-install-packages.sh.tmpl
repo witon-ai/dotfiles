@@ -3,6 +3,8 @@
 
 set -e
 
+curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh
+
 brew bundle --file=/dev/stdin <<EOF
 {{ range .packages.darwin.brews -}}
 brew {{ . | quote }}
