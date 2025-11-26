@@ -5,6 +5,7 @@ packages:
   darwin:
     brews:
     - 'git'
+    - 'pipx'
     casks:
     - 'google-chrome'
   linux:
